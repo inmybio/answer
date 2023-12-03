@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello Browser</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f1f1f1;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #333;
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var isCompatible = true;
+      var supportedBrowsers = ["Firefox", "Chrome", "Edge", "Safari", "Opera", "Brave", "Vivaldi", "DuckDuckGo"];
+      var currentBrowser = navigator.userAgent;
+
+      if (supportedBrowsers.every(function(browser) {
+        return currentBrowser.indexOf(browser) === -1;
+      })) {
+        isCompatible = false;
+      }
+
+      if (isCompatible) {
+        window.location.href = 'https://www.tapplink.co/view/13418/4'; // Replace with your compatible link
+      } else {
+        var catImage = document.createElement('img');
+        catImage.src = 'cat_image.jpg'; // Replace with your cat image URL or path
+        document.body.appendChild(catImage);
+      }
+    });
+  </script>
+</head>
+<body>
+</body>
+</html>
